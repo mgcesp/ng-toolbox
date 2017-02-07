@@ -1,0 +1,124 @@
+.circle {
+  height: 64px;
+  width: 64px;
+  border: 4px solid #34B;
+  border-radius: 50%;
+  animation: grow 1s ease infinite alternate;
+}
+.inner-circle {
+  position: relative;
+  top: 4px;
+  left: 4px;
+  height: 48px;
+  width: 48px;
+  background: #34B;
+  border-radius: 50%;
+}
+.circle-spin {
+  border: 4px solid #EEE;
+  border-top: 4px solid #34B;
+  border-bottom: 4px solid #34B;
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes grow {
+  0% { transform: scale(1.0); }
+  100% { transform: scale(1.25); }
+}
+.oval {
+  position: relative;
+  margin: 7em auto;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  background: navy;
+  animation: spin 2s linear infinite;
+}
+.arc-top {
+  overflow: hidden;
+  position: absolute;
+  top: -8px;
+  right: 50%;
+  bottom: 50%;
+  left: -8px;
+  transform-origin: 100% 100%;
+  transform: rotate(0) skewX(20deg);
+}
+.arc-top:before {
+  box-sizing: border-box;
+  display: block;
+  border: solid 4px navy;
+  height: 200%;
+  width: 200%;
+  border-radius: 50%;
+  transform: skewX(-20deg);
+  content: '';
+}
+.arc-btm {
+  overflow: hidden;
+  position: absolute;
+  top: -8px;
+  right: 50%;
+  bottom: 50%;
+  left: -8px;
+  transform-origin: 100% 100%;
+  transform: rotate(90deg) skewX(20deg);
+}
+.arc-btm:before {
+  box-sizing: border-box;
+  display: block;
+  border: solid 4px navy;
+  height: 200%;
+  width: 200%;
+  border-radius: 50%;
+  transform: skewX(-20deg);
+  content: '';
+}
+.arc-left {
+  overflow: hidden;
+  position: absolute;
+  top: -8px;
+  right: 50%;
+  bottom: 50%;
+  left: -8px;
+  transform-origin: 100% 100%;
+  transform: rotate(180deg) skewX(20deg);
+}
+.arc-left:before {
+  box-sizing: border-box;
+  display: block;
+  border: solid 4px navy;
+  height: 200%;
+  width: 200%;
+  border-radius: 50%;
+  transform: skewX(-20deg);
+  content: '';
+}
+.arc-right {
+  overflow: hidden;
+  position: absolute;
+  top: -8px;
+  right: 50%;
+  bottom: 50%;
+  left: -8px;
+  transform-origin: 100% 100%;
+  transform: rotate(270deg) skewX(20deg);
+}
+.arc-right:before {
+  box-sizing: border-box;
+  display: block;
+  border: solid 4px navy;
+  height: 200%;
+  width: 200%;
+  border-radius: 50%;
+  transform: skewX(-20deg);
+  content: '';
+}
+

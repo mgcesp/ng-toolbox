@@ -1,0 +1,13 @@
+<!-- <div [@signal]="signal" *ngIf="isHere" class="traffic-light"></div>
+<button (click)="go()">GO</button>
+<button (click)="stop()">STOP</button>
+<button (click)=onToggle()>TOGGLE</button>
+<button class="ripple">PRESS</button> -->
+
+<div [@heroState]="heroState" class="hero"></div>
+<button (click)="boom()">BOOM</button>
+
+<div *ngIf="showIt">
+  <div [@shrinkOut]="estado" class="box"></div>
+</div>
+<button (click)="cambio()">CLICK</button>
